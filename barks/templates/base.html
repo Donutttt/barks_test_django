@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% if title is defined %}
+            <title>BARKS | {{ title }}</title>
+        {% else %}
+            <title>BARKS</title>
+        {% endif %}
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+            {% include 'header.html' %}
+            
+            <h1>{{ title }}</h1>
+
+            {% block content %}
+            {% endblock %}
+
+            {% include 'footer.html' %}
+    </body>
+
+</html>
