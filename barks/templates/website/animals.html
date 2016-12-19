@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>Animals:</h3>
-    {% for animal in animals %}
-        <p>{{ animal.name }}</p>
-    {% endfor %}
+    
+    <div id="reactroot">
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
+    {% load static %}
+    <script src="{% static 'animals.js' %}" type="text/babel"></script>
+
 {% endblock %}

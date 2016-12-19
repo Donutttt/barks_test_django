@@ -1,15 +1,15 @@
 /*
  *
-#8A5907 brown
-#1C1160
-#055946
+#936518 brown
+#261C66 blue
+#227663 green
  * */
 
 
 footer{
     height: 3em;
     width: 100%;    
-    background-color: #8A5907;
+    background-color: #1C1160;
     color: white;
 
     position: absolute;
@@ -17,14 +17,20 @@ footer{
 }
 
 nav.navbar-default{
-    background-color: #8A5907;
+    background-color: #261C66;
     color: white;
+    height: 5em;
 }
 
 .navbar-default .navbar-nav>li>a{
     color: white;
 }
 
+.navbar-default .navbar-nav>li>a:hover{
+    color: #227663;
+}
+
 body{
+    margin-top: 5em;
     margin-bottom: 3em;
 }
