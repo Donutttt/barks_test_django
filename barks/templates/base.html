@@ -8,14 +8,19 @@
             <title>BARKS</title>
         {% endif %}
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
             {% include 'header.html' %}
             
             <h1>{{ title }}</h1>
-
-            {% block content %}
-            {% endblock %}
+            
+            <div class="main-content">
+                {% block content %}
+                {% endblock %}
+            </div>
 
             {% include 'footer.html' %}
     </body>

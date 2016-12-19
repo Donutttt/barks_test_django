@@ -1,0 +1,30 @@
+/*
+ *
+#8A5907 brown
+#1C1160
+#055946
+ * */
+
+
+footer{
+    height: 3em;
+    width: 100%;    
+    background-color: #8A5907;
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+}
+
+nav.navbar-default{
+    background-color: #8A5907;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
+
+body{
+    margin-bottom: 3em;
+}
