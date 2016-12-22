@@ -32,12 +32,33 @@ class Animal(models.Model):
 
 
 
-class News(models.Model):
+class NewsItem(models.Model):
 
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    body = models.TextField()
     record_input = models.DateTimeField(default=timezone.now)
     image = models.ImageField()
 
     def __unicode__(self):
         return self.title
+
+
+class Event(models.Model):
+
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    event_start = models.DateTimeField() 
+    image = models.ImageField()
+
+    def __unicode__(self):
+        return self.title
+
+
+class Contact(models.Model):
+    
+    contact_name = models.CharField(max_length=200)
+    contact_detail = models.CharField(max_length=300) 
+
+    def __unicode__(self):
+        return self.contact_name
+

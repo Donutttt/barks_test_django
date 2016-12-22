@@ -30,6 +30,10 @@ body{
     margin-bottom: 3em;
 }
 
+.animal-list-wrapper{
+    margin-top: 3em;
+}
+
 .animal-list{
     margin-top: 3em;
 }
@@ -50,6 +54,8 @@ body{
     top: 0;
     display: inline-block;
     border-bottom: solid 2px #261C66;
+    background-color: white;
+    z-index: 2;
 }
 
 .animal-listing-image{

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse, JsonResponse
 from django.forms import ModelForm
-from website.models import Animal, News
+from website.models import Animal
 
 import json
 
