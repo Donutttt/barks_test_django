@@ -1,11 +1,9 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse, JsonResponse
 from django.forms import ModelForm
-from website.models import Animal
+from website.models import Animal, News
 
 import json
-
-from website.models import Animal
 
 def index(request):
     return render(request, 'website/index.html', {})

@@ -16,13 +16,6 @@ class Animal(models.Model):
 
     ANIMAL_TYPE_CHOICES = [(_animal_type, _animal_type) for _animal_type in ANIMAL_TYPES]
 
-    # ANIMAL_TYPE_CHOICES = (
-        # ('cat', 'Cats and Kittens'),
-        # ('rabbit_gp', 'Rabbits and Guinea Pigs'),
-        # ('small_furries', 'Small furries'),
-        # ('other', 'Other'),
-    # )
-
     name = models.CharField(max_length=200)
     description = models.TextField()
     record_input = models.DateTimeField(default=timezone.now)
@@ -34,3 +27,17 @@ class Animal(models.Model):
             )
     image = models.ImageField()
 
+    def __unicode__(self):
+        return self.name
+
+
+
+class News(models.Model):
+
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    record_input = models.DateTimeField(default=timezone.now)
+    image = models.ImageField()
+
+    def __unicode__(self):
+        return self.title
