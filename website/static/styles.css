@@ -9,21 +9,16 @@
 footer{
     height: 3em;
     width: 100%;    
-    background-color: #1C1160;
-    color: white;
+
+    border-top: solid 2px #261C66;
 
     position: absolute;
     bottom: 0;
 }
 
 nav.navbar-default{
-    background-color: #261C66;
-    color: white;
     height: 5em;
-}
-
-.navbar-default .navbar-nav>li>a{
-    color: white;
+    border-bottom: solid 2px #261C66;
 }
 
 .navbar-default .navbar-nav>li>a:hover{
@@ -33,4 +28,30 @@ nav.navbar-default{
 body{
     margin-top: 5em;
     margin-bottom: 3em;
+}
+
+.animal-list{
+    margin-top: 3em;
+}
+
+.animal-listing{
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.animal-listing h4{
+    margin-top: 0;
+    color: #261C66;
+}
+
+.animal-type-div{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    border-bottom: solid 2px #261C66;
+}
+
+.animal-listing-image{
+    max-width: 100%;
 }

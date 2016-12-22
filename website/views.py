@@ -13,7 +13,7 @@ def index(request):
 
 
 def animals_data(request):
-    animals = Animal.objects.filter().values('name', 'description', 'age', 'type')
+    animals = Animal.objects.filter().values('name', 'description', 'age', 'type', 'image')
 
     dataDict = {
         "animals": animals,

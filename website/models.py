@@ -7,12 +7,21 @@ from django.db import models
 
 class Animal(models.Model):
 
-    ANIMAL_TYPE_CHOICES = (
-        ('cat', 'Cats and Kittens'),
-        ('rabbit_gp', 'Rabbits and Guinea Pigs'),
-        ('small_furries', 'Small furries'),
-        ('other', 'Other'),
-    )
+    ANIMAL_TYPES = [
+        'Cats and Kittens',
+        'Rabbits and Guinea Pigs',
+        'Small Furries',
+        'Other',
+    ]
+
+    ANIMAL_TYPE_CHOICES = [(_animal_type, _animal_type) for _animal_type in ANIMAL_TYPES]
+
+    # ANIMAL_TYPE_CHOICES = (
+        # ('cat', 'Cats and Kittens'),
+        # ('rabbit_gp', 'Rabbits and Guinea Pigs'),
+        # ('small_furries', 'Small furries'),
+        # ('other', 'Other'),
+    # )
 
     name = models.CharField(max_length=200)
     description = models.TextField()
@@ -23,4 +32,5 @@ class Animal(models.Model):
                 choices = ANIMAL_TYPE_CHOICES,
                 default = 'other',
             )
+    image = models.ImageField()
 
