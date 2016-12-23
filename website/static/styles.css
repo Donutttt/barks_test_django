@@ -61,3 +61,7 @@ body{
 .animal-listing-image{
     max-width: 100%;
 }
+
+.news-current-page-span{
+    font-weight: bold;
+}

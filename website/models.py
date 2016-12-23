@@ -33,7 +33,6 @@ class Animal(models.Model):
 
 
 class NewsItem(models.Model):
-
     title = models.CharField(max_length=200)
     body = models.TextField()
     record_input = models.DateTimeField(default=timezone.now)
@@ -44,7 +43,6 @@ class NewsItem(models.Model):
 
 
 class Event(models.Model):
-
     title = models.CharField(max_length=200)
     description = models.TextField()
     event_start = models.DateTimeField() 
@@ -55,7 +53,6 @@ class Event(models.Model):
 
 
 class Contact(models.Model):
-    
     contact_name = models.CharField(max_length=200)
     contact_detail = models.CharField(max_length=300) 
 
