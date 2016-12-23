@@ -12,7 +12,7 @@
                     {% if i != requestedPage %}
                         <span><a href="/news_events?p={{ i }}">{{ i }}</a></span>
                     {% else %}
-                        <span class="news-current-page-span">{{ i }}</span>
+                        <span class="bold">{{ i }}</span>
                     {% endif %}
                 {% endfor %}
             </div>

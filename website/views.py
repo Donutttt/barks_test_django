@@ -52,6 +52,10 @@ def contacts(request):
 
     return render(request, 'website/contact.html', dataDict)
 
+def donate(request):
+
+    return render(request, 'website/donate.html', {})
+
 
 
 def test(request):

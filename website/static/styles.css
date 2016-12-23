@@ -6,6 +6,17 @@
  * */
 
 
+body{
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    min-height: 800px;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+
 footer{
     height: 3em;
     width: 100%;    
@@ -23,11 +34,6 @@ nav.navbar-default{
 
 .navbar-default .navbar-nav>li>a:hover{
     color: #227663;
-}
-
-body{
-    margin-top: 5em;
-    margin-bottom: 3em;
 }
 
 .animal-list-wrapper{
@@ -76,4 +82,12 @@ body{
 
 .contact-name{
     margin-top: 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+iframe{
+    border: none;
 }
