@@ -7,12 +7,17 @@
                     <h1>BARKS</h1>
                 </div>
             </div>
-            <ul class="nav navbar-nav">
-                <li><a href="/animals">Adopt</a></li>
-                <li><a href="/donate">Donate</a></li>
-                <li><a href="/contacts">Contact</a></li>
-                <li><a href="/news_events">News and Events</a></li>
-            </ul>
+
+            <div class="standard-menu">
+                {% include "menu_list.html" %}
+            </div>
+
+            <div class="mobile-menu-wrapper">
+                <div class="mobile-menu">
+                    {% include "menu_list.html" %}
+                </div>
+                <span class="glyphicon glyphicon-menu-hamburger mobile-menu-icon"></span>
+            </div>
         </div>
     </nav>
 

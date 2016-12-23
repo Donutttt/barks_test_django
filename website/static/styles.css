@@ -91,3 +91,49 @@ nav.navbar-default{
 iframe{
     border: none;
 }
+
+.mobile-menu-wrapper{
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+
+    background-color: #261C66;
+    color: white;
+
+    padding: 0.5em 0.75em;
+
+    border-radius: 5px;
+}
+
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu-icon{
+    float: right;
+}
+
+.mobile-menu ul{
+    width: 10em;
+}
+
+.mobile-menu li{
+    display: inline-block;
+    width: 100%;
+}
+
+.mobile-menu a{
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    .mobile-menu-wrapper{
+        display: inline-block;
+    }
+
+    .standard-menu{
+        display: none;
+    }
+}
