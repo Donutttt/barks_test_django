@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse, JsonResponse
 from django.forms import ModelForm
-from website.models import Animal, NewsItem, Event
+from website.models import Animal, NewsItem, Event, Contact
 
 import json
 
@@ -41,6 +41,17 @@ def news_and_events(request):
     }
 
     return render(request, 'website/news_and_events.html', dataDict)
+
+def contacts(request):
+
+    contacts = Contact.objects.all() 
+
+    dataDict = {
+        "contacts": contacts,
+    }
+
+    return render(request, 'website/contact.html', dataDict)
+
 
 
 def test(request):

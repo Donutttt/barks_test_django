@@ -54,7 +54,7 @@ class Event(models.Model):
 
 class Contact(models.Model):
     contact_name = models.CharField(max_length=200)
-    contact_detail = models.CharField(max_length=300) 
+    contact_detail = models.TextField(max_length=300) 
 
     def __unicode__(self):
         return self.contact_name

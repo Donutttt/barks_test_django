@@ -65,3 +65,15 @@ body{
 .news-current-page-span{
     font-weight: bold;
 }
+
+.contacts{
+    margin-top: 2em;
+}
+
+.contact-wrapper{
+    margin-bottom: 2em;
+}
+
+.contact-name{
+    margin-top: 0;
+}
