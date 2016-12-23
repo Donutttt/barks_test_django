@@ -20,7 +20,7 @@
 
             {% for newsItem in news %}
                 <div class="news-item">
-                    <h3 class="news-item">{{ newsItem.title }}</h3>
+                    <h3 class="news-title">{{ newsItem.title }}</h3>
                     <p class="news-date">{{ newsItem.record_input.date }}</p>
                     <p class="news-body">{{ newsItem.body }}</p>
                 </div>
@@ -28,6 +28,14 @@
         </div>
 
         <div class="events-wrapper col-xs-12 col-sm-5">
+            <h2>Events</h2>
+            {% for event in events %}
+                <div class="event-wrapper">
+                    <h3 class="event-title">{{ event.title }}</h3> 
+                    <p class="event-date">{{ event.event_start }}</p>
+                    <p class="event-body">{{ event.description }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 

@@ -37,7 +37,7 @@ def news_and_events(request):
         "requestedPage": requestedPage,
         "news": news.page(requestedPage),
         "newsPagesRange": news.page_range,
-        "events": events,
+        "events": events.page(1),
     }
 
     return render(request, 'website/news_and_events.html', dataDict)
