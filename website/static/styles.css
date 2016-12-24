@@ -128,10 +128,9 @@ iframe{
     color: white;
 }
 
-.animal-focus-image{
+.main-image{
     width: 50%;
     height: auto;
-    margin: 0 auto;
 }
 
 @media screen and (max-width: 767px){
@@ -141,5 +140,9 @@ iframe{
 
     .standard-menu{
         display: none;
+    }
+
+    .main-image{
+        width: 100%;
     }
 }

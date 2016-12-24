@@ -65,6 +65,16 @@ def animal(request, animalId):
 
     return render(request, 'website/animal.html', dataDict)
 
+def news_item(request, newsItemId):
+    
+    requestedNewsItem = NewsItem.objects.filter(id = newsItemId).first()
+
+    dataDict = {
+        "newsItemId": newsItemId,
+        "requestedNewsItem": requestedNewsItem,
+    }
+
+    return render(request, 'website/news_item.html', dataDict)
 
 def test(request):
     return HttpResponse("test reached return")

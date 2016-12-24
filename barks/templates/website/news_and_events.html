@@ -20,7 +20,7 @@
 
             {% for newsItem in news %}
                 <div class="news-item">
-                    <h3 class="news-title">{{ newsItem.title }}</h3>
+                    <a href="/news_item/{{ newsItem.id  }}"><h3 class="news-title">{{ newsItem.title }}</h3></a>
                     <p class="news-date">{{ newsItem.record_input.date }}</p>
                     <p class="news-body">{{ newsItem.body }}</p>
                 </div>

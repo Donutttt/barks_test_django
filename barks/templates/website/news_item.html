@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="news-item row">
+        <div class="col-xs-12">
+            {% if requestedNewsItem.image %}
+                <img class="main-image"  src="/media/{{ requestedNewsItem.image }}" />
+                <h2>{{ requestedNewsItem.title }}</h2>
+                <p>{{ requestedNewsItem.body }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
