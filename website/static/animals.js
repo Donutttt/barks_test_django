@@ -28,6 +28,9 @@ var AnimalComponent = React.createClass({
                     <div className="description-wrapper">
                         <p>{ this.props.animalInput.description }</p>
                     </div>
+                    <div className="animal-link-wrapper">
+                        <a href={ '/animal/' + this.props.animalInput.id }>Find out more</a>
+                    </div>
                 </div>
             </div>
         )

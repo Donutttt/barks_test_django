@@ -11,7 +11,7 @@ def index(request):
 
 
 def animals_data(request):
-    animals = Animal.objects.filter().values('name', 'description', 'age', 'type', 'image')
+    animals = Animal.objects.filter().values('name', 'description', 'age', 'type', 'image', "id")
 
     dataDict = {
         "animals": animals,
@@ -25,7 +25,6 @@ def animals(request):
 
 
 def news_and_events(request):
-
     from django.core.paginator import Paginator
 
     requestedPage = int(request.GET.get('p', '1'))
@@ -43,7 +42,6 @@ def news_and_events(request):
     return render(request, 'website/news_and_events.html', dataDict)
 
 def contacts(request):
-
     contacts = Contact.objects.all() 
 
     dataDict = {
@@ -53,9 +51,19 @@ def contacts(request):
     return render(request, 'website/contact.html', dataDict)
 
 def donate(request):
-
     return render(request, 'website/donate.html', {})
 
+
+def animal(request, animalId):
+
+    requestedAnimal = Animal.objects.filter(id = animalId).first()
+
+    dataDict = {
+        "animalId": animalId,        
+        "requestedAnimal": requestedAnimal,
+    }    
+
+    return render(request, 'website/animal.html', dataDict)
 
 
 def test(request):
