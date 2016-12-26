@@ -55,7 +55,6 @@ def donate(request):
 
 
 def animal(request, animalId):
-
     requestedAnimal = Animal.objects.filter(id = animalId).first()
 
     dataDict = {
@@ -66,7 +65,6 @@ def animal(request, animalId):
     return render(request, 'website/animal.html', dataDict)
 
 def news_item(request, newsItemId):
-    
     requestedNewsItem = NewsItem.objects.filter(id = newsItemId).first()
 
     dataDict = {
@@ -75,6 +73,16 @@ def news_item(request, newsItemId):
     }
 
     return render(request, 'website/news_item.html', dataDict)
+
+def event(request, eventId):
+    requestedEventItem = Event.objects.filter(id = eventId).first() 
+
+    dataDict = {
+        "eventId": eventId,
+        "eventItem": requestedEventItem,
+    }
+
+    return render(request, 'website/event.html', dataDict)
 
 def test(request):
     return HttpResponse("test reached return")

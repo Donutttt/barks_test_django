@@ -34,6 +34,7 @@
                     <h3 class="event-title">{{ event.title }}</h3> 
                     <p class="event-date">{{ event.event_start }}</p>
                     <p class="event-body">{{ event.description }}</p>
+                    <a href="/event/{{ event.id }}">Find out more</a>
                 </div>
             {% endfor %}
         </div>
