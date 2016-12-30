@@ -36,6 +36,14 @@ nav.navbar-default{
     color: #227663;
 }
 
+.title{
+    display: inline-block;
+}
+
+.navbar-header{
+    display: inline-block;
+}
+
 .animal-list-wrapper{
     margin-top: 3em;
 }
@@ -131,6 +139,19 @@ iframe{
 .main-image{
     width: 50%;
     height: auto;
+}
+
+.facebook-blue{
+    color: #3B5998;
+}
+
+.social-media-icon:hover{
+    color: black;
+}
+
+.social-media-icon{
+    font-size: 2em;
+    padding-top: 0.2em;
 }
 
 @media screen and (max-width: 767px){
