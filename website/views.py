@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse, JsonResponse
 from django.forms import ModelForm
-from website.models import Animal, NewsItem, Event, Contact
+from django.utils.html import strip_tags
+from website.models import Animal, NewsItem, Event, Contact, AnimalContact
+from .forms import AnimalContactForm
 
 import json
 
@@ -83,6 +85,47 @@ def event(request, eventId):
     }
 
     return render(request, 'website/event.html', dataDict)
+
+def animal_contact(request, requestedAnimalId):
+
+    dataDict = {
+        "requestedAnimalId": requestedAnimalId,        
+        "method": request.method,
+        "formSubmitted": False,
+    }
+
+    if request.method == 'POST':
+        # when the method is post, the form has been submitted
+        dataDict['formSubmitted'] = True
+        postedForm = AnimalContactForm(request.POST)
+
+        if postedForm.is_valid():
+            cleanedData = postedForm.cleaned_data
+            sentAnimalId = int(strip_tags(request.POST.get('animalId', '0'))) # extra care as not auto handled by django
+
+            animalMatchingSentId = requestedAnimal = Animal.objects.filter(id = sentAnimalId).first()
+                
+            newAnimalContact = AnimalContact(
+                contact_name = cleanedData['nameField'],
+                contact_email = cleanedData['emailField'],
+                contact_text = cleanedData['textField'],
+                animal_name = animalMatchingSentId.name,
+                animal_id = sentAnimalId,
+            )
+
+            newAnimalContact.save()
+
+        # contact_name = models.CharField(max_length=200)
+        # animal_id = model.FloatField(default=0)
+        # contact_email = model.EmailField(default="none@none.com")
+        # contact_text = models.TextField()
+
+    else:
+        # just the regular page
+        form = AnimalContactForm()
+        dataDict['form'] = form
+
+    return render(request, 'website/animal_contact.html', dataDict)
 
 def test(request):
     return HttpResponse("test reached return")

@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^animal/([0-9]+)$', views.animal),
     url(r'^news_item/([0-9]+)$', views.news_item),
     url(r'^event/([0-9]+)$', views.event),
+    url(r'^animal_contact/([0-9]+)$', views.animal_contact),
 ]
 
 from django.conf import settings

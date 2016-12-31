@@ -59,3 +59,14 @@ class Contact(models.Model):
     def __unicode__(self):
         return self.contact_name
 
+class AnimalContact(models.Model):
+    contact_name = models.CharField(max_length=200)
+    animal_id = models.IntegerField(default=0)
+    animal_name = models.CharField(default="none provided", max_length=200)
+    contact_email = models.EmailField(default="none@none.com")
+    contact_text = models.TextField()
+
+    def __unicode__(self):
+        return "{} ({}) - {}".format(self.contact_name, self.contact_email, self.animal_name)
+
+
