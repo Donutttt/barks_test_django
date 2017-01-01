@@ -1,0 +1,5 @@
+body{
+    background-image: url('/static/cat.jpeg');
+    width: 100%;
+    color: white;
+}
