@@ -96,6 +96,9 @@ def animal_contact(request, requestedAnimalId):
 
     if request.method == 'POST':
         # when the method is post, the form has been submitted
+
+        from django.core.mail import send_mail
+
         dataDict['formSubmitted'] = True
         postedForm = AnimalContactForm(request.POST)
 
@@ -115,10 +118,12 @@ def animal_contact(request, requestedAnimalId):
 
             newAnimalContact.save()
 
-        # contact_name = models.CharField(max_length=200)
-        # animal_id = model.FloatField(default=0)
-        # contact_email = model.EmailField(default="none@none.com")
-        # contact_text = models.TextField()
+            send_mail(
+                subject = "A message about {} from {}".format(cleanedData['nameField'], animalMatchingSentId.name),
+                message = "The following message was sent: {}".format(cleanedData['textField']),
+                from_email = "orr2@live.com",
+                recipient_list = ["orr2@live.com"],
+            )
 
     else:
         # just the regular page
