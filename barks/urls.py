@@ -7,7 +7,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
-    url(r'^test$', views.test),
     url(r'^animals$', views.animals),
     url(r'^animals_data$', views.animals_data),
     url(r'^news_events$', views.news_and_events),

@@ -119,10 +119,10 @@ def animal_contact(request, requestedAnimalId):
             newAnimalContact.save()
 
             send_mail(
-                subject = "A message about {} from {}".format(cleanedData['nameField'], animalMatchingSentId.name),
+                subject = "A message about {} from {}".format(animalMatchingSentId.name, cleanedData['nameField']),
                 message = "The following message was sent: {}".format(cleanedData['textField']),
                 from_email = "orr2@live.com",
-                recipient_list = ["orr2@live.com"],
+                recipient_list = ["oliverradini@googlemail.com", "orr2@live.com", "bihisuha@fulvie.com"],
             )
 
     else:
@@ -132,5 +132,3 @@ def animal_contact(request, requestedAnimalId):
 
     return render(request, 'website/animal_contact.html', dataDict)
 
-def test(request):
-    return HttpResponse("test reached return")
