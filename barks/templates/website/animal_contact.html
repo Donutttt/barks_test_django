@@ -5,14 +5,20 @@
     {% if formSubmitted %}
         <h4>Thank you for your message</h4>
         <p>We will respond as soon as possible</p>
-
-        {{ formData }}
     {% else %}
         <h4>Please enter your details below</h4>
         <form action="/animal_contact/0" method="post">
 
             {% csrf_token %}
-            {{ form }}
+            <div class="form-field">
+                <label>{{ form.nameField.label}}</label> {{ form.nameField }}
+            </div>
+            <div class="form-field">
+                <label>{{ form.emailField.label}}</label> {{ form.emailField }}
+            </div>
+            <div class="form-field">
+                <label>{{ form.textField.label}}</label> {{ form.textField }}
+            </div>
             <input type="text" name="animalId" value="{{ requestedAnimalId }}" style="display: none;" />
             <input type="submit" value="Submit"  />
 

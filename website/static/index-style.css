@@ -1,5 +1,6 @@
 body{
-    background-image: url('/static/cat.jpeg');
+    background-image: url('/static/cat_blue.jpeg');
+    background-position: 75%;
     width: 100%;
     color: white;
 }
