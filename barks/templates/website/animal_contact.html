@@ -6,23 +6,31 @@
         <h4>Thank you for your message</h4>
         <p>We will respond as soon as possible</p>
     {% else %}
+    <div class="pull-right">
         <h4>Please enter your details below</h4>
         <form action="/animal_contact/0" method="post">
 
             {% csrf_token %}
-            <div class="form-field">
-                <label>{{ form.nameField.label}}</label> {{ form.nameField }}
+            <div class="form-field group">
+                {{ form.nameField }}
+                <span class="highlight"></span>
+                <span class="bar"></span>
             </div>
-            <div class="form-field">
-                <label>{{ form.emailField.label}}</label> {{ form.emailField }}
+            <div class="form-field group">
+                {{ form.emailField }}
+                <span class="highlight"></span>
+                <span class="bar"></span>
             </div>
-            <div class="form-field">
-                <label>{{ form.textField.label}}</label> {{ form.textField }}
+            <div class="form-field group">
+                {{ form.textField }}
+                <span class="highlight"></span>
+                <span class="bar"></span>
             </div>
             <input type="text" name="animalId" value="{{ requestedAnimalId }}" style="display: none;" />
-            <input type="submit" value="Submit"  />
+            <input type="submit" value="Submit" class="btn btn-warning" />
 
         </form>
+   </div>
     {% endif %}
 
 {% endblock %}
